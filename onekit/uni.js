@@ -2,78 +2,78 @@ export default class uni {
  
   ///////////////// basic ///应用级事件/////////////////////////////
   static base64ToArrayBuffer(base64) {
-    return swan.base64ToArrayBuffer(base64);
+    return tt.base64ToArrayBuffer(base64);
   }
   static arrayBufferToBase64(arrayBuffer) {
-    return swan.arrayBufferToBase64(arrayBuffer);
+    return tt.arrayBufferToBase64(arrayBuffer);
   }
   static getUpdateManager(object) {
-    return swan.getUpdateManager(object);
+    return tt.getUpdateManager(object);
   }
   static getLaunchOptionsSync(object) {
-    return swan.getLaunchOptionsSync(object);
+    return tt.getLaunchOptionsSync(object);
   }
  
   static onPageNotFound(object) {
-    return swan.onPageNotFound(object);
+    return tt.onPageNotFound(object);
   }
   static onError(object) {
-    return swan.onError(object);
+    return tt.onError(object);
   }
   static onAppShow(object) {
-    return swan.onAppShow(object);
+    return tt.onAppShow(object);
   }
   static onAppHide(object) {
-    return swan.onAppHide(object);
+    return tt.onAppHide(object);
   }
   static offPageNotFound(object) {
-    return swan.offPageNotFound(object);
+    return tt.offPageNotFound(object);
   }
   static offError(object) {
-    return swan.offError(object);
+    return tt.offError(object);
   }
 
   static offAppShow(object) {
-    return swan.offAppShow(object);
+    return tt.offAppShow(object);
   }
   
   static offAppHide(object) {
-    return swan.offAppHide(object);
+    return tt.offAppHide(object);
   }
 
   static setEnableDebug(object) {
-    return swan.setEnableDebug(object);
+    return tt.setEnableDebug(object);
   }
   static getLogManager(object) {
-    return swan.getLogManager(object);
+    return tt.getLogManager(object);
   }
 //
   static writeBLECharacteristicValue(object) {
-    return swan.writeBLECharacteristicValue(object);
+    return tt.writeBLECharacteristicValue(object);
   }
   static readBLECharacteristicValue(object) {
-    return swan.readBLECharacteristicValue(object);
+    return tt.readBLECharacteristicValue(object);
   }
   static onBLEConnectionStateChange(object) {
-    return swan.onBLEConnectionStateChange(object);
+    return tt.onBLEConnectionStateChange(object);
   }
   static onBLECharacteristicValueChange(object) {
-    return swan.onBLECharacteristicValueChange(object);
+    return tt.onBLECharacteristicValueChange(object);
   }
   static notifyBLECharacteristicValueChange(object) {
-    return swan.notifyBLECharacteristicValueChange(object);
+    return tt.notifyBLECharacteristicValueChange(object);
   }
   static getBLEDeviceServices(object) {
-    return swan.getBLEDeviceServices(object);
+    return tt.getBLEDeviceServices(object);
   }
   static getBLEDeviceCharacteristics(object) {
-    return swan.getBLEDeviceCharacteristics(object);
+    return tt.getBLEDeviceCharacteristics(object);
   }
   static createBLEConnection(object) {
-    return swan.createBLEConnection(object);
+    return tt.createBLEConnection(object);
   }
   static closeBLEConnection(object) {
-    return swan.closeBLEConnection(object);
+    return tt.closeBLEConnection(object);
   }
  
   //
@@ -81,105 +81,105 @@ export default class uni {
  
   /////////////////// Ext //////////////
   static getExtConfigSync(object) {
-    return swan.getExtConfigSync(object)
+    return tt.getExtConfigSync(object)
   }
   static getExtConfig(object) {
-    return swan.getExtConfig(object)
+    return tt.getExtConfig(object)
   }
   //////////////////// File //////////
   static getFileSystemManager(object) {
-    return swan.getFileSystemManager(object)
+    return tt.getFileSystemManager(object)
   }
   static getFileInfo(object) {
-    return swan.getFileInfo(object)
+    return tt.getFileInfo(object)
   }
   static removeSavedFile(object) {
-    return swan.removeSavedFile(object)
+    return tt.removeSavedFile(object)
   }
   static getSavedFileInfo(object) {
-    return swan.getSavedFileInfo(object)
+    return tt.getSavedFileInfo(object)
   }
   static getSavedFileList(object) {
-    return swan.getSavedFileList(object)
+    return tt.getSavedFileList(object)
   }
   static openDocument(object) {
-    return swan.openDocument(object)
+    return tt.openDocument(object)
   }
   static saveFile(object) {
-    return swan.saveFile(object);
+    return tt.saveFile(object);
   } 
   //////////////// Network ///////////////
   static request(object) {
-    return swan.request(object);
+    return tt.request(object);
   }
   static downloadFile(object) {
-    return swan.downloadFile(object)
+    return tt.downloadFile(object)
   }
   static uploadFile(object) {
-    return swan.uploadFile(object)
+    return tt.uploadFile(object)
   }
   //////////////////////////////websocket///////////////////////////////////////
   static connectSocket(object) {
-    return swan.connectSocket(object)
+    return tt.connectSocket(object)
   }
   static onSocketError(object) {
-    return swan.onSocketError(object)
+    return tt.onSocketError(object)
   }
   static onSocketMessage(object) {
-    return swan.onSocketMessage(object)
+    return tt.onSocketMessage(object)
   }
   static onSocketClose(object) {
-    return swan.onSocketClose(object)
+    return tt.onSocketClose(object)
   }
   static onSocketOpen(object) {
-    return swan.connectSocket(object)
+    return tt.connectSocket(object)
   }
   static sendSocketMessage(object) {
-    return swan.sendSocketMessage(object)
+    return tt.sendSocketMessage(object)
   }
   static closeSocket(object) {
-    return swan.closeSocket(object)
+    return tt.closeSocket(object)
   }
 
   ////////////////////////////////mDNS////////////////////////////////////////////
   static stopLocalServiceDiscovery(object) {
-    return swan.stopLocalServiceDiscovery(object);
+    return tt.stopLocalServiceDiscovery(object);
   }
   static startLocalServiceDiscovery(object) {
-    return swan.startLocalServiceDiscovery(object);
+    return tt.startLocalServiceDiscovery(object);
   }
   static onLocalServiceResolveFail(callback) {
-    return swan.onLocalServiceResolveFail(callback);
+    return tt.onLocalServiceResolveFail(callback);
   }
   static onLocalServiceLost(callback) {
-    return swan.onLocalServiceLost(callback);
+    return tt.onLocalServiceLost(callback);
   }
   static onLocalServiceFound(callback) {
-    return swan.onLocalServiceFound(callback);
+    return tt.onLocalServiceFound(callback);
   }
   static onLocalServiceDiscoveryStop(callback) {
-    return swan.onLocalServiceDiscoveryStop(callback);
+    return tt.onLocalServiceDiscoveryStop(callback);
   }
   static offLocalServiceResolveFail(callback) {
-    return swan.offLocalServiceResolveFail(callback);
+    return tt.offLocalServiceResolveFail(callback);
   }
   static offLocalServiceLost(callback) {
-    return swan.offLocalServiceLost(callback);
+    return tt.offLocalServiceLost(callback);
   }
   static offLocalServiceFound(callback) {
-    return swan.offLocalServiceFound(callback);
+    return tt.offLocalServiceFound(callback);
   }
   static offLocalServiceDiscoveryStop(callback) {
-    return swan.offLocalServiceDiscoveryStop(callback);
+    return tt.offLocalServiceDiscoveryStop(callback);
   }
   ///////////////////////////UDP通信////////////////////////////////////////
   static createUDPSocket(){
-    return swan.createUDPSocket();
+    return tt.createUDPSocket();
   }
   ///////// Open Interface ///////////////////////////////////////////////
   static checkSession() {
     var now = new Date().getTime();
-    return getApp().onekitswan._jscode && getApp().onekitswan._login && now <= getApp().onekitswan._login + 1000 * 60 * 60 * 24 * 3;
+    return getApp().onekittt._jscode && getApp().onekittt._login && now <= getApp().onekittt._login + 1000 * 60 * 60 * 24 * 3;
   }
   static checkSession(object) {
     if (uni.checkSession()) {
@@ -202,12 +202,12 @@ export default class uni {
   static login = function(object) {
     var that = this;
     if (!object) {
-      return swan.login(object);
+      return tt.login(object);
     }
     var object2 = {};
     object2.success = function(res) {
-      getApp().onekitswan._code = res.code;
-      getApp().onekitswan._login = new Date().getTime();
+      getApp().onekittt._code = res.code;
+      getApp().onekittt._login = new Date().getTime();
       var result = {
         code: res.code
       };
@@ -228,18 +228,18 @@ export default class uni {
     }
     if (uni.checkSession()) {
       object2.success({
-        code: getApp().onekitswan._code
+        code: getApp().onekittt._code
       });
     } else {
-      swan.login(object2);
+      tt.login(object2);
     }
   };
   static requestPolymerPayment = function(object) {
    uni.login({
       success(res) {
         var code = res.code;
-        var url = getApp().onekitswan.server + "orderinfo";
-        swan.request({
+        var url = getApp().onekittt.server + "orderinfo";
+        tt.request({
           url: url,
           header: {
             'Content-Type': 'application/x-www-form-urlencoded'
@@ -250,7 +250,7 @@ export default class uni {
             code: code
           },
           success(res) {
-            swan.requestPayment({
+            tt.requestPayment({
               appId: res.data.appId,
               timeStamp: res.data.timeStamp,
               nonceStr: res.data.nonceStr,
@@ -280,8 +280,8 @@ export default class uni {
    uni.login({
       success(res) {
         var code = res.code;
-        var url = getApp().onekitswan.server + "userinfo";
-        swan.request({
+        var url = getApp().onekittt.server + "userinfo";
+        tt.request({
           url: url,
           header: {
             'Content-Type': 'application/x-www-form-urlencoded'
@@ -305,7 +305,7 @@ export default class uni {
 
   }
   static getUserInfo(object) {
-    getApp().onekitswan.getuserinfo = (data) => {
+    getApp().onekittt.getuserinfo = (data) => {
      uni._getUserInfo(data, (res) => {
         if (object.success) {
           object.success(res);
@@ -315,17 +315,17 @@ export default class uni {
         }
       }, true);
     }
-    swan.navigateTo({
+    tt.navigateTo({
       url: '/onekitwx/page/getuserinfo/getuserinfo'
     })
   }
   static getOpenData = function(object) {
     function success(opendata) {
       var opendata = opendata.userInfo;
-      getApp().onekitswan.opendata = opendata;
-      getApp().onekitswan.opendataCallbacks = [];
-      for (var cb = 0; cb < getApp().onekitswan.opendataCallbacks.length; cb++) {
-        getApp().onekitswan.opendataCallbacks[cb](opendata);
+      getApp().onekittt.opendata = opendata;
+      getApp().onekittt.opendataCallbacks = [];
+      for (var cb = 0; cb < getApp().onekittt.opendataCallbacks.length; cb++) {
+        getApp().onekittt.opendataCallbacks[cb](opendata);
       }
       if (object.success) {
         object.success(opendata);
@@ -334,24 +334,24 @@ export default class uni {
         object.complete(opendata);
       }
     }
-    var opendata = getApp().onekitswan.opendata;
+    var opendata = getApp().onekittt.opendata;
     if (opendata) {
       if (Object.keys(opendata) > 0) {
         object.success(opendata);
       } else {
         if (object.success) {
-          getApp().onekitswan.opendataCallbacks.push(object.success);
+          getApp().onekittt.opendataCallbacks.push(object.success);
         }
       }
       return;
     }
-    getApp().onekitswan.opendata = {};
+    getApp().onekittt.opendata = {};
    uni.login({
       success(res) {
         var code = res.code;
        uni.getUserInfo({
           success(res) {
-            var url = getApp().onekitswan.server + "userinfo";
+            var url = getApp().onekittt.server + "userinfo";
             my.httpRequest({
               url: url,
               header: {
@@ -380,8 +380,8 @@ export default class uni {
    uni.login({
       success(res) {
         var code = res.code;
-        var url = getApp().onekitswan.server + "phonenumber";
-        swan.request({
+        var url = getApp().onekittt.server + "phonenumber";
+        tt.request({
           url: url,
           header: {
             'Content-Type': 'application/x-www-form-urlencoded'
@@ -399,56 +399,56 @@ export default class uni {
     });
   }
   static navigateToMiniProgram(object) {
-    return swan.navigateToMiniProgram(object)
+    return tt.navigateToMiniProgram(object)
   }
   static navigateBackMiniProgram(object) {
-    return swan.navigateBackMiniProgram(object)
+    return tt.navigateBackMiniProgram(object)
   }
   static getAccountInfoSync(object) {
-    return swan.getAccountInfoSync(object)
+    return tt.getAccountInfoSync(object)
   }
 
   static reportMonitor(object) {
-    return swan.reportMonitor(object)
+    return tt.reportMonitor(object)
   }
   static reportAnalytics(object, eventName) {
-    return swan.reportAnalytics(object, eventName)
+    return tt.reportAnalytics(object, eventName)
   }
   static requestPayment(object) {
-    return swan.requestPayment(object);
+    return tt.requestPayment(object);
   }
   static authorize(object) {
-    return swan.authorize(object)
+    return tt.authorize(object)
   }
   static openSetting(object) {
-    return swan.openSetting(object)
+    return tt.openSetting(object)
   }
   static getSetting(object) {
-    return swan.getSetting(object)
+    return tt.getSetting(object)
   }
   static chooseAddress(object) {
-    return swan.chooseAddress(object)
+    return tt.chooseAddress(object)
   }
   static openCard(object) {
-    return swan.openCard(object);
+    return tt.openCard(object);
   }
   static chooseInvoiceTitle(object) {
-    return swan.chooseInvoiceTitle(object)
+    return tt.chooseInvoiceTitle(object)
   }
   static addCard = function(object) {
-    return swan.addCard(object);
+    return tt.addCard(object);
   }
   
   static chooseInvoice(object) {
-    return swan.chooseInvoice(object)
+    return tt.chooseInvoice(object)
   }
 
   static getWeRunData(object) {
-    return swan.getWeRunData(object)
+    return tt.getWeRunData(object)
   }
   static reportMonitor(name, value) {
     var js_code = getApp().onekit.jscode;
-    swan.httpRequest({
+    tt.httpRequest({
       url: "http://192.168.0.106:8080/onekit_adapter/reportMonitor",
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
@@ -474,410 +474,410 @@ export default class uni {
   };
   ////////// Router ///////////////////////////////////////////
   static navigateTo(object) {
-    return swan.navigateTo(object);
+    return tt.navigateTo(object);
   }
   static redirectTo(object) {
-    return swan.redirectTo(object);
+    return tt.redirectTo(object);
   }
   static reLaunch(object) {
-    return swan.reLaunch(object);
+    return tt.reLaunch(object);
   }
   static switchTab(object) {
-    return swan.switchTab(object);
+    return tt.switchTab(object);
   }
   static navigateBack(object) {
-    return swan.navigateBack(object);
+    return tt.navigateBack(object);
   }
  
   ///////////// Share /////////////
   static updateShareMenu(object) {
-    return swan.updateShareMenu(object)
+    return tt.updateShareMenu(object)
   }
   static showShareMenu(object) {
-    return swan.showShareMenu(object);
+    return tt.showShareMenu(object);
   }
   static hideShareMenu(object) {
-    return swan.hideShareMenu(object)
+    return tt.hideShareMenu(object)
   }
   static getShareInfo(object) {
-    return swan.getShareInfo(object)
+    return tt.getShareInfo(object)
   }
   ////////数据缓存/////// Storage //////////////
   static setStorage(object) {
-    return swan.setStorage(object)
+    return tt.setStorage(object)
   }
   static setStorageSync(key, value) {
-    return swan.setStorageSync(key, value)
+    return tt.setStorageSync(key, value)
   }
   static getStorage(object) {
-    return swan.getStorage(object)
+    return tt.getStorage(object)
   }
   static getStorageSync(key) {
-    return swan.getStorageSync(key);
+    return tt.getStorageSync(key);
   }
   static getStorageInfo(object) {
-    return swan.getStorageInfo(object)
+    return tt.getStorageInfo(object)
   }
   static getStorageInfoSync(object) {
-    return swan.getStorageInfoSync(object)
+    return tt.getStorageInfoSync(object)
   }
   static removeStorage(object) {
-    return swan.removeStorage(object)
+    return tt.removeStorage(object)
   }
   static removeStorageSync(object) {
-    return swan.removeStorageSync(object)
+    return tt.removeStorageSync(object)
   }
   static clearStorage(object) {
-    return swan.clearStorage(object)
+    return tt.clearStorage(object)
   }
   static clearStorageSync(object) {
-    return swan.clearStorageSync(object)
+    return tt.clearStorageSync(object)
   }
     /////////位置/// Location ///////////////
     static getLocation(object) {
-      return swan.getLocation(object)
+      return tt.getLocation(object)
     }
     static chooseLocation(object) {
-      return swan.chooseLocation(object)
+      return tt.chooseLocation(object)
     }
     static openLocation(object) {
-      return swan.openLocation(object)
+      return tt.openLocation(object)
     }
     static createMapContext(object) {
-      return swan.createMapContext(object)
+      return tt.createMapContext(object)
     }
  ///////////////////////媒体///////////// Media //////////////////////////////////////
                 ///////////////////图片/////image///////////////////////////////
  static chooseImage(object) {
-  return swan.chooseImage(object);
+  return tt.chooseImage(object);
 }
 static previewImage(object) {
-  return swan.previewImage(object)
+  return tt.previewImage(object)
 }
 static getImageInfo(object) {
-  return swan.getImageInfo(object)
+  return tt.getImageInfo(object)
 }
 static saveImageToPhotosAlbum(object) {
-  return swan.saveImageToPhotosAlbum(object)
+  return tt.saveImageToPhotosAlbum(object)
 }
  static compressImage(object) {
-  return swan.compressImage(object)
+  return tt.compressImage(object)
 }
 static chooseMessageFile(object){
-  return swan.chooseMessageFile(object)
+  return tt.chooseMessageFile(object)
 }
                     /////////////////////////////录音/////////////////////////////////////////
 static getRecorderManager(object) {
-  return swan.getRecorderManager(object)
+  return tt.getRecorderManager(object)
 }
                     ////////////////////////背景音频///////////////////////////////
 static getBackgroundAudioManager(object) {
-  return swan.getBackgroundAudioManager(object)
+  return tt.getBackgroundAudioManager(object)
 }
                     ////////////////////////音频组件控制///////////////////////////////
 static createInnerAudioContext(object) {
-  return swan.createInnerAudioContext(object)
+  return tt.createInnerAudioContext(object)
 }
                     ////////////////////////视频///////////////////////////////
 
 static chooseVideo(object) {
-  return swan.chooseVideo(object)
+  return tt.chooseVideo(object)
 }
 static chooseMedia(object) {
-  return swan.chooseMedia(object)
+  return tt.chooseMedia(object)
 }
 static saveVideoToPhotosAlbum(object) {
-  return swan.saveVideoToPhotosAlbum(object)
+  return tt.saveVideoToPhotosAlbum(object)
 }
 static getVideoInfo(object){
-  return swan.getVideoInfo(object)
+  return tt.getVideoInfo(object)
 }
 static compressVideo(object){
-  return swan.compressVideo(object)
+  return tt.compressVideo(object)
 }
 static openVideoEditor(object){
-  return swan.openVideoEditor(object)
+  return tt.openVideoEditor(object)
 }
                     ////////////////////////视频，相机，直播组件控制///////////////////////////////
 static createVideoContext(object) {
-  return swan.createVideoContext(object)
+  return tt.createVideoContext(object)
 }
 static createCameraContext(cameraId,ui) {
-  return new CameraContext(swan.createCameraContext(cameraId));
+  return new CameraContext(tt.createCameraContext(cameraId));
 } 
 static createLivePlayerContext(playerId,ui) {
-  return new LivePlayerContext(swan.createLivePlayerContext(playerId));
+  return new LivePlayerContext(tt.createLivePlayerContext(playerId));
 }
 static createLivePusherContext(object) {
-  return swan.createLivePusherContext(object)
+  return tt.createLivePusherContext(object)
 }
 static createMediaContainer(){
-  return swan.createMediaContainer()
+  return tt.createMediaContainer()
 }
 /////////////////////////系统信息//////////////////////////////
 static getSystemInfo(object) {
-  return swan.getSystemInfo(object);
+  return tt.getSystemInfo(object);
 }
 static getSystemInfoSync() {
-  return swan.getSystemInfoSync();
+  return tt.getSystemInfoSync();
 }
 static canIUse(object) {
   return true;
 }
 //////////////////////////////内存/////////////////////////////
 static onMemoryWarning(object) {
-  return swan.onMemoryWarning(object);
+  return tt.onMemoryWarning(object);
 }
 /////////////////////////////网络状态/////////////////////////////
 static getNetworkType = function(object) {
-  return swan.getNetworkType(object);
+  return tt.getNetworkType(object);
 }
 static _network = function(res) {
-  return swan._network(object);
+  return tt._network(object);
 }
 static onNetworkStatusChange(callback) {
-  return swan.onNetworkStatusChange(callback);
+  return tt.onNetworkStatusChange(callback);
 }
 /////////////////////系统主题////////////////////
 
 //////////////////////加速度计////////////////////
 static onAccelerometerChange(callback) {
-  return swan.onAccelerometerChange(callback);
+  return tt.onAccelerometerChange(callback);
 }
 static stopAccelerometer(object) {
-  return swan.stopAccelerometer(object);
+  return tt.stopAccelerometer(object);
 }
 static startAccelerometer(object) {
-  return swan.startAccelerometer(object);
+  return tt.startAccelerometer(object);
 }
 //////////////////////罗盘////////////////////
 static onCompassChange(callback) {
-  return swan.onCompassChange(callback);
+  return tt.onCompassChange(callback);
 }
 static stopCompass(object) {
-  return swan.stopCompass(object);
+  return tt.stopCompass(object);
 }
 static startCompass(object) {
-  return swan.startCompass(object);
+  return tt.startCompass(object);
 }
 //////////////////////陀螺仪////////////////////
 static onGyroscopeChange(object) {
-  return swan.onGyroscopeChange(object);
+  return tt.onGyroscopeChange(object);
 }
 static stopGyroscope(object) {
-  return swan.stopGyroscope(object);
+  return tt.stopGyroscope(object);
 }
 static startGyroscope(object) {
-  return swan.startGyroscope(object);
+  return tt.startGyroscope(object);
 }
 //////////////////////电话////////////////////
 static makePhoneCall = function(object) {
-  return swan.makePhoneCall(object);
+  return tt.makePhoneCall(object);
 }
 //
 static scanCode = function(object) {
-  return swan.scanCode(object);
+  return tt.scanCode(object);
 }
 //
 static getClipboardData(object) {
-  return swan.getClipboardData(object);
+  return tt.getClipboardData(object);
 }
 static setClipboardData(object) {
-  return swan.setClipboardData(object);
+  return tt.setClipboardData(object);
 }
 //
 static setScreenBrightness(object) {
-  return swan.setScreenBrightness(object);
+  return tt.setScreenBrightness(object);
 }
 static setKeepScreenOn(object) {
-  return swan.setKeepScreenOn(object);
+  return tt.setKeepScreenOn(object);
 }
 static getScreenBrightness(object) {
-  return swan.getScreenBrightness(object);
+  return tt.getScreenBrightness(object);
 }
 //
 static onUserCaptureScreen(object) {
-  return swan.onUserCaptureScreen(object);
+  return tt.onUserCaptureScreen(object);
 }
 //
 static vibrate(object){
-  return swan.vibrateShort(object);
+  return tt.vibrateShort(object);
   }
 
 static vibrateLong(object) {
-  return swan.vibrateLong(object);
+  return tt.vibrateLong(object);
 }
 static vibrateShort(object) {
-  return swan.vibrateShort(object);
+  return tt.vibrateShort(object);
 }
 //
 static addPhoneContact(object) {
-  return swan.addPhoneContact(object);
+  return tt.addPhoneContact(object);
 }
 ///////蓝牙//////
 static stopBluetoothDevicesDiscovery(object) { 
-   return swan.stopBluetoothDevicesDiscovery(object);
+   return tt.stopBluetoothDevicesDiscovery(object);
   }
 static startBluetoothDevicesDiscovery(object) {
-  return swan.startBluetoothDevicesDiscovery(object);
+  return tt.startBluetoothDevicesDiscovery(object);
 }
 static openBluetoothAdapter(object) { 
-   return swan.openBluetoothAdapter(object); }
+   return tt.openBluetoothAdapter(object); }
 static onBluetoothDeviceFound(object) {
-  return swan.onBluetoothDeviceFound(object);
+  return tt.onBluetoothDeviceFound(object);
 }
 static onBluetoothAdapterStateChange(object) {
-  return swan.onBluetoothAdapterStateChange(object);
+  return tt.onBluetoothAdapterStateChange(object);
 }
 static getConnectedBluetoothDevices(object) {
-  return swan.getConnectedBluetoothDevices(object);
+  return tt.getConnectedBluetoothDevices(object);
 }
 static getBluetoothDevices(object) {
-  return swan.getBluetoothDevices(object);
+  return tt.getBluetoothDevices(object);
 }
 static getBluetoothAdapterState(object) {
-  return swan.getBluetoothAdapterState(object);
+  return tt.getBluetoothAdapterState(object);
 }
 static closeBluetoothAdapter(object) {
-  return swan.closeBluetoothAdapter(object);
+  return tt.closeBluetoothAdapter(object);
 }
 ////低功耗蓝牙/////
 static setBLEMTU(object){
-  return swan.setBLEMTU(object)
+  return tt.setBLEMTU(object)
 }
 static writeBLECharacteristicValue(object){
-  return swan.writeBLECharacteristicValue(object)
+  return tt.writeBLECharacteristicValue(object)
 }
 static readBLECharacteristicValue(object){
-  return swan.readBLECharacteristicValue(object)
+  return tt.readBLECharacteristicValue(object)
 }
 static onBLEConnectionStateChange(object){
-  return swan.onBLEConnectionStateChange(object)
+  return tt.onBLEConnectionStateChange(object)
 }
 static onBLECharacteristicValueChange(object){
-  return swan.onBLECharacteristicValueChange(object)
+  return tt.onBLECharacteristicValueChange(object)
 }
 static notifyBLECharacteristicValueChange(object){
-  return swan.notifyBLECharacteristicValueChange(object)
+  return tt.notifyBLECharacteristicValueChange(object)
 }
 static getBLEDeviceServices(object){
-  return swan.getBLEDeviceServices(object)
+  return tt.getBLEDeviceServices(object)
 }
 static getBLEDeviceRSSI(object){
-  return swan.getBLEDeviceRSSI(object)
+  return tt.getBLEDeviceRSSI(object)
 }
 static getBLEDeviceCharacteristics(object){
-  return swan.getBLEDeviceCharacteristics(object)
+  return tt.getBLEDeviceCharacteristics(object)
 }
 static createBLEConnection(object){
-  return swan.createBLEConnection(object)
+  return tt.createBLEConnection(object)
 }
 static closeBLEConnection(object){
-  return swan.closeBLEConnection(object)
+  return tt.closeBLEConnection(object)
 }
 
  ////////////// iBeacon //////////////////
  static onBeaconServiceChange(object) {
-  return swan.onBeaconServiceChange(object);
+  return tt.onBeaconServiceChange(object);
 }
 static onBeaconUpdate(object) {
-  return swan.onBeaconUpdate(object);
+  return tt.onBeaconUpdate(object);
 }
 static getBeacons(object) {
-  return swan.getBeacons(object);
+  return tt.getBeacons(object);
 }
 static stopBeaconDiscovery(object) {
-  return swan.stopBeaconDiscovery(object);
+  return tt.stopBeaconDiscovery(object);
 }
 static startBeaconDiscovery(object) {
-  return swan.startBeaconDiscovery(object);
+  return tt.startBeaconDiscovery(object);
 }
 //////////////Wi-Fi/////////////
 static stopWifi(object) {
-  return swan.stopWifi(object);
+  return tt.stopWifi(object);
 }
 static startWifi(object) {
-  return swan.startWifi(object);
+  return tt.startWifi(object);
 }
 static setWifiList(object) {
-  return swan.setWifiList(object);
+  return tt.setWifiList(object);
 }
 static onWifiConnected(object) {
-  return swan.onWifiConnected(object);
+  return tt.onWifiConnected(object);
 }
 static onGetWifiList(object) {
-  return swan.onGetWifiList(object);
+  return tt.onGetWifiList(object);
 }
 static offWifiConnected(callback){
-  return swan.offWifiConnected(callback)
+  return tt.offWifiConnected(callback)
 }
 static offGetWifiList(callback){
-  return swan.offGetWifiList(callback)
+  return tt.offGetWifiList(callback)
 }
 static getWifiList(object) {
-  return swan.getWifiList(object);
+  return tt.getWifiList(object);
 }
 static getConnectedWifi(object) {
-  return swan.getConnectedWifi(object);
+  return tt.getConnectedWifi(object);
 }
 static connectWifi(object) {
-  return swan.connectWifi(object);
+  return tt.connectWifi(object);
 }
 /////////////////电量/////////////////
 static getBatteryInfoSync(object) {
-  return swan.getBatteryInfoSync(object);
+  return tt.getBatteryInfoSync(object);
 }
 static getBatteryInfo(result) {
-  return swan.getBatteryInfo(object);
+  return tt.getBatteryInfo(object);
 }
 static getBatteryInfo(object) {
-  return swan.getBatteryInfo(object);
+  return tt.getBatteryInfo(object);
 }
 /////////////////////NFC/////////
  static stopHCE(object) {
-  return swan.stopHCE(object);
+  return tt.stopHCE(object);
 }
 static startHCE(object) {
-  return swan.startHCE(object);
+  return tt.startHCE(object);
 }
 static sendHCEMessage(object) {
-  return swan.sendHCEMessage(object);
+  return tt.sendHCEMessage(object);
 }
 static onHCEMessage(object) {
-  return swan.onHCEMessage(object);
+  return tt.onHCEMessage(object);
 }
 static offHCEMessage(callback){
-return swan.offHCEMessage(callback)
+return tt.offHCEMessage(callback)
 }
 static getNFCAdapter(){
-  return swan.getNFCAdapter()
+  return tt.getNFCAdapter()
 }
 static getHCEState(object) {
-  return swan.getHCEState(object);
+  return tt.getHCEState(object);
 }
 ///////////////////////////
 
 static onDeviceMotionChange(object) {
-  return swan.onDeviceMotionChange(object);
+  return tt.onDeviceMotionChange(object);
 }
 static stopDeviceMotionListening(object) {
-  return swan.stopDeviceMotionListening(object);
+  return tt.stopDeviceMotionListening(object);
 }
 static startDeviceMotionListening(object) {
-  return swan.startDeviceMotionListening(object);
+  return tt.startDeviceMotionListening(object);
 }
 static offDeviceMotionChange(callback) {
-  return swan.offDeviceMotionChange(callback);
+  return tt.offDeviceMotionChange(callback);
 }
 ////////生物认证////////
 static startSoterAuthentication(object) {
-  return swan.startSoterAuthentication(object)
+  return tt.startSoterAuthentication(object)
 }
 static checkIsSupportSoterAuthentication(object) {
-  return swan.checkIsSupportSoterAuthentication(object)
+  return tt.checkIsSupportSoterAuthentication(object)
 }
 static checkIsSoterEnrolledInDevice(object) {
-  return swan.checkIsSoterEnrolledInDevice(object)
+  return tt.checkIsSoterEnrolledInDevice(object)
 }
   ////////////// Worker ///////////////
   static createWorker(path) {
@@ -885,135 +885,135 @@ static checkIsSoterEnrolledInDevice(object) {
   }
   /////////////////键盘////////////////////
   static hideKeyboard(object) {
-    return swan.hideKeyboard(object)
+    return tt.hideKeyboard(object)
   }
   static onKeyboardHeightChange(callback){
-    return swan.onKeyboardHeightChange(callback)
+    return tt.onKeyboardHeightChange(callback)
   }
 //////////////////////设备完////////////////////
 
 
   ////////////// UI ////////////////
   static showActionSheet(object) {
-    return swan.showActionSheet(object);
+    return tt.showActionSheet(object);
   }
- static redirectTo(object) { return swan.redirectTo(object) }
-   static redirectTo(object) { return swan.redirectTo(object) }
+ static redirectTo(object) { return tt.redirectTo(object) }
+   static redirectTo(object) { return tt.redirectTo(object) }
 
   static hideLoading() {
-    return swan.hideLoading()
+    return tt.hideLoading()
   }
   static showLoading(object) {
-    return swan.showLoading(object);
+    return tt.showLoading(object);
   }
   static hideToast() {
-    return swan.hideToast();
+    return tt.hideToast();
   }
   static showToast(object) {
-    return swan.showToast(object);
+    return tt.showToast(object);
   }
   static showModal(object) {
-    return swan.showModal(object);
+    return tt.showModal(object);
   }
   //////////////////////////////////////
   static setNavigationBarColor(object) {
-    return swan.setNavigationBarColor(object)
+    return tt.setNavigationBarColor(object)
   }
   static hideNavigationBarLoading(object) {
-    return swan.hideNavigationBarLoading(object)
+    return tt.hideNavigationBarLoading(object)
   }
   static showNavigationBarLoading(object) {
-    return swan.showNavigationBarLoading(object)
+    return tt.showNavigationBarLoading(object)
   }
   static hideHomeButton(object){
-    return swan.hideHomeButton(object)
+    return tt.hideHomeButton(object)
   }
 ///////////////////////////////////
 static setTabBarItem(object) {
-  return swan.setTabBarItem(object)
+  return tt.setTabBarItem(object)
 }
 static setTabBarStyle(object) {
-  return swan.setTabBarStyle(object)
+  return tt.setTabBarStyle(object)
 }
 static hideTabBar(object) {
-  return swan.hideTabBar(object)
+  return tt.hideTabBar(object)
 }
 static showTabBar(object) {
-  return swan.showTabBar(object)
+  return tt.showTabBar(object)
 }
 static removeTabBarBadge(object) {
-  return swan.removeTabBarBadge(object)
+  return tt.removeTabBarBadge(object)
 }
 static setTabBarBadge(object) {
-  return swan.setTabBarBadge(object)
+  return tt.setTabBarBadge(object)
 }
 static hideTabBarRedDot(object) {
-  return swan.hideTabBarRedDot(object)
+  return tt.hideTabBarRedDot(object)
 }
 static showTabBarRedDot(object) {
-  return swan.showTabBarRedDot(object)
+  return tt.showTabBarRedDot(object)
 }
 ///////////////////////////////////////////////
 static setBackgroundTextStyle(object) {
-    return swan.setBackgroundTextStyle(object)
+    return tt.setBackgroundTextStyle(object)
   }
   static setBackgroundColor(object) {
-    return swan.setBackgroundColor(object)
+    return tt.setBackgroundColor(object)
   }
    /////////////////// animation //////////////////////////
    static createAnimation(object) {
-    return swan.createAnimation(object);
+    return tt.createAnimation(object);
   }
 /////////////////////滚动//////////////////
 static pageScrollTo(object) {
-  return swan.pageScrollTo(object)
+  return tt.pageScrollTo(object)
 }
 //////////////////窗口////////////////////////
 static offWindowResize(object) {
-  return swan.offWindowResize(object)
+  return tt.offWindowResize(object)
 }
 static onWindowResize(object) {
-  return swan.onWindowResize(object)
+  return tt.onWindowResize(object)
 }
 /////////////////字体/////////////////////////
 static loadFontFace(object) {
-  return swan.loadFontFace(object)
+  return tt.loadFontFace(object)
 }
 /////////////////下拉/////////////////////////
 static PullDownRefresh() {
-  return swan.startPullDownRefresh();
+  return tt.startPullDownRefresh();
 }
 static stopPullDownRefresh() {
-  return swan.stopPullDownRefresh();
+  return tt.stopPullDownRefresh();
 }
 static startPullDownRefresh(object) {
-  return swan.startPullDownRefresh(object);
+  return tt.startPullDownRefresh(object);
 }
 //////////////////////////////////////////
 static createOffscreenCanvas() {
-  return swan.createOffscreenCanvas();
+  return tt.createOffscreenCanvas();
 }
 static createContext() {
   return new Context();
 }
 static createCanvasContext(canvasId,ui) {
-  return new CanvasContext(swan.createCanvasContext(canvasId));
+  return new CanvasContext(tt.createCanvasContext(canvasId));
 }
 static canvasToTempFilePath(object) {
-  return swan.canvasToTempFilePath(object);
+  return tt.canvasToTempFilePath(object);
 }
 static canvasPutImageData(object) {
-  return swan.canvasPutImageData(object)
+  return tt.canvasPutImageData(object)
 };
 static canvasGetImageData(object) {
-  return swan.canvasGetImageData(object)
+  return tt.canvasGetImageData(object)
 };
 ////////////////////////广告//////////////////
 static createRewardedVideoAd(object){
-  return swan.createRewardedVideoAd(object)
+  return tt.createRewardedVideoAd(object)
 }
 static createInterstitialAd(object){
-  return swan.createInterstitialAd(object)
+  return tt.createInterstitialAd(object)
 }
 ////////////////////////////////
 static requestSubscribeMessage(object){
@@ -1021,73 +1021,73 @@ static requestSubscribeMessage(object){
 }
 //////////////////////////////////////////
   static setNavigationBarTitle(object) {
-    return swan.setNavigationBarTitle(object);
+    return tt.setNavigationBarTitle(object);
   };
 
   
   static setTopBarText(object) {
-    return swan.setTopBarText(object)
+    return tt.setTopBarText(object)
   }
   static nextTick(object) {
-    return swan.nextTick(object)
+    return tt.nextTick(object)
   }
   static getMenuButtonBoundingClientRect(object) {
-    return swan.getMenuButtonBoundingClientRect(object)
+    return tt.getMenuButtonBoundingClientRect(object)
   }
  
 
 static stopVoice(object) {
-  return swan.stopVoice(object)
+  return tt.stopVoice(object)
 }
 static pauseVoice(object) {
-  return swan.pauseVoice(object)
+  return tt.pauseVoice(object)
 }
 static playVoice(object) {
-  return swan.playVoice(object)
+  return tt.playVoice(object)
 }
 static setInnerAudioOption(object) {
-  return swan.setInnerAudioOption(object)
+  return tt.setInnerAudioOption(object)
 }
 static getAvailableAudioSources(object) {
-  return swan.getAvailableAudioSources(object)
+  return tt.getAvailableAudioSources(object)
 }
 
 static createAudioContext(object) {
-  return swan.createAudioContext(object)
+  return tt.createAudioContext(object)
 }
 static onBackgroundAudioStop(object) {
-  return swan.onBackgroundAudioStop(object)
+  return tt.onBackgroundAudioStop(object)
 }
 static onBackgroundAudioPause(object) {
-  return swan.onBackgroundAudioPause(object)
+  return tt.onBackgroundAudioPause(object)
 }
 static onBackgroundAudioPlay(object) {
-  return swan.onBackgroundAudioPlay(object)
+  return tt.onBackgroundAudioPlay(object)
 }
 static stopBackgroundAudio(object) {
-  return swan.stopBackgroundAudio(object)
+  return tt.stopBackgroundAudio(object)
 }
 static seekBackgroundAudio(object) {
-  return swan.seekBackgroundAudio(object)
+  return tt.seekBackgroundAudio(object)
 }
 static pauseBackgroundAudio(object) {
-  return swan.pauseBackgroundAudio(object)
+  return tt.pauseBackgroundAudio(object)
 }
 static playBackgroundAudio(object) {
-  return swan.playBackgroundAudio(object)
+  return tt.playBackgroundAudio(object)
 }
 static getBackgroundAudioPlayerState(object) {
-  return swan.getBackgroundAudioPlayerState(object)
+  return tt.getBackgroundAudioPlayerState(object)
 }
 
 
 
 static createInnerAudioContext(audioId,ui) {
-  return new InnerAudioContext(swan.createInnerAudioContext(audioId));
+  return new InnerAudioContext(tt.createInnerAudioContext(audioId));
 }
 
 static createVideoContext(videoId,ui) { 
-  return new VideoContext(swan.createVideoContext(videoId)); 
+  return new VideoContext(tt.createVideoContext(videoId)); 
 }
 
 
@@ -1096,10 +1096,10 @@ static createVideoContext(videoId,ui) {
 
   ////////////// WXML ///////////////
   static createSelectorQuery(object) {
-    return swan.createSelectorQuery(object)
+    return tt.createSelectorQuery(object)
   }
   static createIntersectionObserver(object) {
-    return swan.createIntersectionObserver(object)
+    return tt.createIntersectionObserver(object)
   }
   ///////////////////////////
 
