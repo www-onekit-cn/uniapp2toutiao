@@ -143,38 +143,49 @@ export default class uni {
 
   ////////////////////////////////mDNS////////////////////////////////////////////
   static stopLocalServiceDiscovery(object) {
-    return tt.stopLocalServiceDiscovery(object);
+    // return my.stopLocalServiceDiscovery(object);
+    console.alert("头条不支持");
   }
   static startLocalServiceDiscovery(object) {
-    return tt.startLocalServiceDiscovery(object);
+    // return my.startLocalServiceDiscovery(object);
+    console.alert("头条不支持");
   }
   static onLocalServiceResolveFail(callback) {
-    return tt.onLocalServiceResolveFail(callback);
+    // return my.onLocalServiceResolveFail(callback);
+    console.alert("头条不支持");
   }
   static onLocalServiceLost(callback) {
-    return tt.onLocalServiceLost(callback);
+    // return my.onLocalServiceLost(callback);
+    console.alert("头条不支持");
   }
   static onLocalServiceFound(callback) {
-    return tt.onLocalServiceFound(callback);
+    // return my.onLocalServiceFound(callback);
+    console.alert("头条不支持");
   }
   static onLocalServiceDiscoveryStop(callback) {
-    return tt.onLocalServiceDiscoveryStop(callback);
+    // return my.onLocalServiceDiscoveryStop(callback);
+    console.alert("头条不支持");
   }
   static offLocalServiceResolveFail(callback) {
-    return tt.offLocalServiceResolveFail(callback);
+    // return my.offLocalServiceResolveFail(callback);
+    console.alert("头条不支持");
   }
   static offLocalServiceLost(callback) {
-    return tt.offLocalServiceLost(callback);
+    // return my.offLocalServiceLost(callback);
+    console.alert("头条不支持");
   }
   static offLocalServiceFound(callback) {
-    return tt.offLocalServiceFound(callback);
+    // return my.offLocalServiceFound(callback);
+    console.alert("头条不支持");
   }
   static offLocalServiceDiscoveryStop(callback) {
-    return tt.offLocalServiceDiscoveryStop(callback);
+    // return my.offLocalServiceDiscoveryStop(callback);
+    console.alert("头条不支持");
   }
   ///////////////////////////UDP通信////////////////////////////////////////
   static createUDPSocket(){
-    return tt.createUDPSocket();
+    // return my.createUDPSocket();
+    console.alert("头条不支持");
   }
   ///////// Open Interface ///////////////////////////////////////////////
   static checkSession() {
