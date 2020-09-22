@@ -143,48 +143,48 @@ export default class uni {
 
   ////////////////////////////////mDNS////////////////////////////////////////////
   static stopLocalServiceDiscovery(object) {
-    // return my.stopLocalServiceDiscovery(object);
+    // return tt.stopLocalServiceDiscovery(object);
     console.alert("头条不支持");
   }
   static startLocalServiceDiscovery(object) {
-    // return my.startLocalServiceDiscovery(object);
+    // return tt.startLocalServiceDiscovery(object);
     console.alert("头条不支持");
   }
   static onLocalServiceResolveFail(callback) {
-    // return my.onLocalServiceResolveFail(callback);
+    // return tt.onLocalServiceResolveFail(callback);
     console.alert("头条不支持");
   }
   static onLocalServiceLost(callback) {
-    // return my.onLocalServiceLost(callback);
+    // return tt.onLocalServiceLost(callback);
     console.alert("头条不支持");
   }
   static onLocalServiceFound(callback) {
-    // return my.onLocalServiceFound(callback);
+    // return tt.onLocalServiceFound(callback);
     console.alert("头条不支持");
   }
   static onLocalServiceDiscoveryStop(callback) {
-    // return my.onLocalServiceDiscoveryStop(callback);
+    // return tt.onLocalServiceDiscoveryStop(callback);
     console.alert("头条不支持");
   }
   static offLocalServiceResolveFail(callback) {
-    // return my.offLocalServiceResolveFail(callback);
+    // return tt.offLocalServiceResolveFail(callback);
     console.alert("头条不支持");
   }
   static offLocalServiceLost(callback) {
-    // return my.offLocalServiceLost(callback);
+    // return tt.offLocalServiceLost(callback);
     console.alert("头条不支持");
   }
   static offLocalServiceFound(callback) {
-    // return my.offLocalServiceFound(callback);
+    // return tt.offLocalServiceFound(callback);
     console.alert("头条不支持");
   }
   static offLocalServiceDiscoveryStop(callback) {
-    // return my.offLocalServiceDiscoveryStop(callback);
+    // return tt.offLocalServiceDiscoveryStop(callback);
     console.alert("头条不支持");
   }
   ///////////////////////////UDP通信////////////////////////////////////////
   static createUDPSocket(){
-    // return my.createUDPSocket();
+    // return tt.createUDPSocket();
     console.alert("头条不支持");
   }
   ///////// Open Interface ///////////////////////////////////////////////
@@ -513,6 +513,13 @@ export default class uni {
   static getShareInfo(object) {
     return tt.getShareInfo(object)
   }
+  static share(object){
+    console.alert("本平台不支持")
+  }
+  static shareWithSystem(object){
+        console.alert("本平台不支持")
+
+  }
   ////////数据缓存/////// Storage //////////////
   static setStorage(object) {
     return tt.setStorage(object)
@@ -805,40 +812,59 @@ static startBeaconDiscovery(object) {
 }
 //////////////Wi-Fi/////////////
 static stopWifi(object) {
-  return tt.stopWifi(object);
+  // return tt.stopWifi(object);
+  console.alert("头条暂不支持stopWifi")
 }
 static startWifi(object) {
-  return tt.startWifi(object);
+  // return tt.startWifi(object);
+    console.alert("头条暂不支持startWifi")
+
 }
 static setWifiList(object) {
-  return tt.setWifiList(object);
+  // return tt.setWifiList(object);
+    console.alert("头条暂不支持setWifiList")
+
 }
 static onWifiConnected(object) {
-  return tt.onWifiConnected(object);
+  // return tt.onWifiConnected(object);
+    console.alert("头条暂不支持onWifiConnected")
+
 }
 static onGetWifiList(object) {
-  return tt.onGetWifiList(object);
+  // return tt.onGetWifiList(object);
+    console.alert("头条暂不支持onGetWifiList")
+
 }
 static offWifiConnected(callback){
-  return tt.offWifiConnected(callback)
+  // return tt.offWifiConnected(callback)
+    console.alert("头条暂不支持offWifiConnected")
+
 }
 static offGetWifiList(callback){
-  return tt.offGetWifiList(callback)
+  // return tt.offGetWifiList(callback)
+    console.alert("头条暂不支持offGetWifiList")
+
 }
 static getWifiList(object) {
-  return tt.getWifiList(object);
+  // return tt.getWifiList(object);
+    console.alert("头条暂不支持getWifiList")
+
 }
 static getConnectedWifi(object) {
-  return tt.getConnectedWifi(object);
+  // return tt.getConnectedWifi(object);
+    console.alert("头条暂不支持getConnectedWifi")
+
 }
 static connectWifi(object) {
-  return tt.connectWifi(object);
+  // return tt.connectWifi(object);
+    console.alert("头条暂不支持connectWifi")
+
 }
 /////////////////电量/////////////////
 static getBatteryInfoSync(object) {
   return tt.getBatteryInfoSync(object);
 }
-static getBatteryInfo(result) {
+static getBatteryInfo(object) {
   return tt.getBatteryInfo(object);
 }
 static getBatteryInfo(object) {
@@ -846,49 +872,77 @@ static getBatteryInfo(object) {
 }
 /////////////////////NFC/////////
  static stopHCE(object) {
-  return tt.stopHCE(object);
+  // return tt.stopHCE(object);
+      console.alert("头条暂不支持stopHCE")
+
 }
 static startHCE(object) {
-  return tt.startHCE(object);
+  // return tt.startHCE(object);
+        console.alert("头条暂不支持startHCE")
+
 }
 static sendHCEMessage(object) {
-  return tt.sendHCEMessage(object);
+  // return tt.sendHCEMessage(object);
+        console.alert("头条暂不支持sendHCEMessage")
+
 }
 static onHCEMessage(object) {
-  return tt.onHCEMessage(object);
+  // return tt.onHCEMessage(object);
+        console.alert("头条暂不支持onHCEMessage")
+
 }
 static offHCEMessage(callback){
-return tt.offHCEMessage(callback)
+// return tt.offHCEMessage(callback)
+      console.alert("头条暂不支持offHCEMessage")
+
 }
 static getNFCAdapter(){
-  return tt.getNFCAdapter()
+  // return tt.getNFCAdapter()
+        console.alert("头条暂不支持getNFCAdapter")
+
 }
 static getHCEState(object) {
-  return tt.getHCEState(object);
+  // return tt.getHCEState(object);
+        console.alert("头条暂不支持getHCEState")
+
 }
-///////////////////////////
+//////////////////设备方向/////////
 
 static onDeviceMotionChange(object) {
-  return tt.onDeviceMotionChange(object);
+  // return tt.onDeviceMotionChange(object);
+          console.alert("头条暂不支持onDeviceMotionChange")
+
 }
 static stopDeviceMotionListening(object) {
-  return tt.stopDeviceMotionListening(object);
+  // return tt.stopDeviceMotionListening(object);
+            console.alert("头条暂不支持stopDeviceMotionListening")
+
 }
 static startDeviceMotionListening(object) {
-  return tt.startDeviceMotionListening(object);
+  // return tt.startDeviceMotionListening(object);
+            console.alert("头条暂不支持startDeviceMotionListening")
+
 }
 static offDeviceMotionChange(callback) {
-  return tt.offDeviceMotionChange(callback);
+  // return tt.offDeviceMotionChange(callback);
+            console.alert("头条暂不支持offDeviceMotionChange")
+
 }
 ////////生物认证////////
 static startSoterAuthentication(object) {
-  return tt.startSoterAuthentication(object)
+  // return tt.startSoterAuthentication(object)
+   console.alert("头条暂不支持startSoterAuthentication")
+
 }
 static checkIsSupportSoterAuthentication(object) {
-  return tt.checkIsSupportSoterAuthentication(object)
+  // return tt.checkIsSupportSoterAuthentication(object)
+     console.alert("头条暂不支持checkIsSupportSoterAuthentication")
+
 }
 static checkIsSoterEnrolledInDevice(object) {
-  return tt.checkIsSoterEnrolledInDevice(object)
+  // return tt.checkIsSoterEnrolledInDevice(object)
+     console.alert("头条暂不支持checkIsSoterEnrolledInDevice")
+
 }
   ////////////// Worker ///////////////
   static createWorker(path) {
@@ -963,6 +1017,10 @@ static hideTabBarRedDot(object) {
 }
 static showTabBarRedDot(object) {
   return tt.showTabBarRedDot(object)
+  
+}
+static onTabBarMidButtonTap(CALLBACK){
+  console.alert("本平台暂不支持onTabBarMidButtonTap")
 }
 ///////////////////////////////////////////////
 static setBackgroundTextStyle(object) {
@@ -1002,7 +1060,8 @@ static startPullDownRefresh(object) {
 }
 //////////////////////////////////////////
 static createOffscreenCanvas() {
-  return tt.createOffscreenCanvas();
+  // return tt.createOffscreenCanvas();
+  console.alert("本平台不支持createOffscreenCanvas")
 }
 static createContext() {
   return new Context();
@@ -1128,4 +1187,16 @@ function ai_init(api) {
  uni.ai[api] = (object) => {
     return uni_ai.run(api, object);
   }
+}
+function getSubNVueById(subNvueId){
+  
+}
+function getCurrentSubNVue(){
+
+}
+function requireNativePlugin(PluginName){
+  
+}
+static getProvider(object){
+  console.alert("本平台不支持getProvider")
 }
