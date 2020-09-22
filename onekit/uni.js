@@ -1,8 +1,8 @@
 export default class uni {
  
   ///////////////// basic ///应用级事件/////////////////////////////
-  static base64ToArrayBuffer(base64) {
-    return tt.base64ToArrayBuffer(base64);
+  static base64ToArrayBuffer(str) {
+    return tt.base64ToArrayBuffer(str);
   }
   static arrayBufferToBase64(arrayBuffer) {
     return tt.arrayBufferToBase64(arrayBuffer);
@@ -42,7 +42,8 @@ export default class uni {
   }
 
   static setEnableDebug(object) {
-    return tt.setEnableDebug(object);
+    // return tt.setEnableDebug(object);
+    console.alert("暂不支持setEnableDebug")
   }
   static getLogManager(object) {
     return tt.getLogManager(object);
@@ -81,10 +82,13 @@ export default class uni {
  
   /////////////////// Ext //////////////
   static getExtConfigSync(object) {
-    return tt.getExtConfigSync(object)
+    // return tt.getExtConfigSync(object)
+    console.alert("本平台暂不支持getExtConfigSync")
   }
   static getExtConfig(object) {
-    return tt.getExtConfig(object)
+    // return tt.getExtConfig(object)
+        console.alert("本平台暂不支持getExtConfig")
+
   }
   //////////////////// File //////////
   static getFileSystemManager(object) {
@@ -97,7 +101,8 @@ export default class uni {
     return tt.removeSavedFile(object)
   }
   static getSavedFileInfo(object) {
-    return tt.getSavedFileInfo(object)
+    // return tt.getSavedFileInfo(object)
+    console.alert("本平台暂不支持getSavedFileInfo")
   }
   static getSavedFileList(object) {
     return tt.getSavedFileList(object)
@@ -108,6 +113,9 @@ export default class uni {
   static saveFile(object) {
     return tt.saveFile(object);
   } 
+  static getFileSystemManager(object){
+    return tt.getFileSystemManager(object)
+  }
   //////////////// Network ///////////////
   static request(object) {
     return tt.request(object);
@@ -210,7 +218,7 @@ export default class uni {
       }
     }
   }
-  static login = function(object) {
+  static login = function(object) {///
     var that = this;
     if (!object) {
       return tt.login(object);
@@ -416,7 +424,8 @@ export default class uni {
     return tt.navigateBackMiniProgram(object)
   }
   static getAccountInfoSync(object) {
-    return tt.getAccountInfoSync(object)
+    //return tt.getAccountInfoSync(object)
+    console.alert("本平台暂不支持getAccountInfoSync")
   }
 
   static reportMonitor(object) {
@@ -425,11 +434,12 @@ export default class uni {
   static reportAnalytics(object, eventName) {
     return tt.reportAnalytics(object, eventName)
   }
-  static requestPayment(object) {
-    return tt.requestPayment(object);
+  static requestPayment(object) {///provider参数未完成
+    return tt.pay(object);
   }
   static authorize(object) {
     return tt.authorize(object)
+    console.alert("未完成")
   }
   static openSetting(object) {
     return tt.openSetting(object)
@@ -437,14 +447,19 @@ export default class uni {
   static getSetting(object) {
     return tt.getSetting(object)
   }
-  static chooseAddress(object) {
+  static chooseAddress(object) {//success返回参数不一样，编程
     return tt.chooseAddress(object)
   }
   static openCard(object) {
-    return tt.openCard(object);
+    // return tt.openCard(object);
+    console.alert("本平台暂不支持卡券")
+  }
+  static openCardDetail(object){
+    console.alert("本平台暂不支持卡券")
   }
   static chooseInvoiceTitle(object) {
-    return tt.chooseInvoiceTitle(object)
+    // return tt.chooseInvoiceTitle(object)
+    console.alert("本平台暂不支持chooseInvoiceTitle")
   }
   static addCard = function(object) {
     return tt.addCard(object);
@@ -455,7 +470,11 @@ export default class uni {
   }
 
   static getWeRunData(object) {
-    return tt.getWeRunData(object)
+    // return tt.getWeRunData(object)
+    console.alert("本平台暂不支持运动（计步器）")
+  }
+  static getRunData(object){
+    console.alert("本平台暂不支持运动（计步器）")
   }
   static reportMonitor(name, value) {
     var js_code = getApp().onekit.jscode;
@@ -484,9 +503,66 @@ export default class uni {
     });
   };
   ////////// Router ///////////////////////////////////////////
-  static navigateTo(object) {
-    return tt.navigateTo(object);
+  static navigateTo(uni_object) {
+    if(!uni_object){
+      return
+    }
+    var uni_url=uni_object.url
+    var uni_animationType=uni_object.animationType||"pop-in"
+    var uni_animationDuration=uni_object.animationDuration||300
+    var uni_events=uni_object.events
+    var uni_success=uni_object.success
+    var uni_fail=uni_object.fail
+    var uni_complete=uni_object.complete
+     var tt_object = {};
+    //
+   if (uni_url) {
+      tt_object.url = uni_url;
+    }
+    if (uni_animationType) {
+      tt_object.animationType = uni_animationType;
+    }
+    if (uni_animationDuration) {
+      tt_object.animationDuration = uni_animationDuration;
+    }
+    if (uni_events) {
+      tt_object.events = uni_events;
+    }
+    if (uni_success) {
+      tt_object.success = uni_success;
+    }
+    if (uni_fail) {
+      tt_object.fail = uni_fail;
+    }
+    if (uni_complete) {
+      tt_object.complete = uni_complete;
+    }
+    //
+    tt_object.success = function (tt_res) {
+      var uni_res = {
+        eventChanner: tt_res.errMsg,
+      };
+      if (uni_object.success) {
+        uni_object.success(uni_res);
+      }
+      if (uni_object.complete) {
+        uni_object.complete(uni_res);
+      }
+    };
+    tt_object.fail = function (tt_res) {
+     var uni_res = {
+
+      };
+      if (uni_object.fail) {
+        uni_object.fail(uni_res);
+      }
+      if (uni_object.complete) {
+        uni_object.complete(uni_res);
+      }
+    };
+    tt.navigateTo(tt_object)
   }
+  //
   static redirectTo(object) {
     return tt.redirectTo(object);
   }
@@ -499,7 +575,9 @@ export default class uni {
   static navigateBack(object) {
     return tt.navigateBack(object);
   }
- 
+ static preloadPage(object){
+   console.alert("本平台不支持")
+ }
   ///////////// Share /////////////
   static updateShareMenu(object) {
     return tt.updateShareMenu(object)
@@ -556,7 +634,8 @@ export default class uni {
       return tt.getLocation(object)
     }
     static chooseLocation(object) {
-      return tt.chooseLocation(object)
+      // return tt.chooseLocation(object)
+      console.alert("本平台不支持chooseLocation")
     }
     static openLocation(object) {
       return tt.openLocation(object)
@@ -582,7 +661,8 @@ static saveImageToPhotosAlbum(object) {
   return tt.compressImage(object)
 }
 static chooseMessageFile(object){
-  return tt.chooseMessageFile(object)
+  // return tt.chooseMessageFile(object)
+  console.alert("本平台不支持chooseMessageFile")
 }
                     /////////////////////////////录音/////////////////////////////////////////
 static getRecorderManager(object) {
@@ -602,35 +682,91 @@ static chooseVideo(object) {
   return tt.chooseVideo(object)
 }
 static chooseMedia(object) {
-  return tt.chooseMedia(object)
+  // return tt.chooseMedia(object)
+  console.alert("本平台不支持chooseMedia")
 }
 static saveVideoToPhotosAlbum(object) {
   return tt.saveVideoToPhotosAlbum(object)
 }
 static getVideoInfo(object){
-  return tt.getVideoInfo(object)
+  // return tt.getVideoInfo(object)
+    console.alert("本平台不支持getVideoInfo")
 }
 static compressVideo(object){
-  return tt.compressVideo(object)
+  // return tt.compressVideo(object)
+      console.alert("本平台不支持compressVideo")
 }
 static openVideoEditor(object){
-  return tt.openVideoEditor(object)
+  // return tt.openVideoEditor(object)
+      console.alert("本平台不支持openVideoEditor")
 }
                     ////////////////////////视频，相机，直播组件控制///////////////////////////////
 static createVideoContext(object) {
   return tt.createVideoContext(object)
 }
 static createCameraContext(cameraId,ui) {
-  return new CameraContext(tt.createCameraContext(cameraId));
+  // return new CameraContext(tt.createCameraContext(cameraId));
+        console.alert("本平台不支持createCameraContext")
+
 } 
-static createLivePlayerContext(playerId,ui) {
-  return new LivePlayerContext(tt.createLivePlayerContext(playerId));
+static createLivePlayerContext(uni_object) {
+  if(!uni_object){
+    return
+  }
+    var uni_livePlayerId=uni_object.livePlayerId
+    var uni_this=uni_object.this
+    var uni_success=uni_object.success
+    var uni_fail=uni_object.fail
+    var uni_complete=uni_object.complete
+     var tt_object = {};
+    //
+   if (uni_livePlayerId) {
+      tt_object.id = uni_livePlayerId;
+    }
+  
+    if (uni_this) {
+      tt_object.component = uni_this;
+    }
+    if (uni_success) {
+      tt_object.success = uni_success;
+    }
+    if (uni_fail) {
+      tt_object.fail = uni_fail;
+    }
+    if (uni_complete) {
+      tt_object.complete = uni_complete;
+    }
+    //
+    tt_object.success = function (tt_res) {
+      var uni_res = {
+      };
+      if (uni_object.success) {
+        uni_object.success(uni_res);
+      }
+      if (uni_object.complete) {
+        uni_object.complete(uni_res);
+      }
+    };
+    tt_object.fail = function (tt_res) {
+     var uni_res = {
+
+      };
+      if (uni_object.fail) {
+        uni_object.fail(uni_res);
+      }
+      if (uni_object.complete) {
+        uni_object.complete(uni_res);
+      }
+    };
+    tt.createLivePlayerContext(tt_object)
 }
+///
 static createLivePusherContext(object) {
   return tt.createLivePusherContext(object)
 }
 static createMediaContainer(){
-  return tt.createMediaContainer()
+  // return tt.createMediaContainer()
+  console.alert("本平台暂不支持createMediaContainer")
 }
 /////////////////////////系统信息//////////////////////////////
 static getSystemInfo(object) {
@@ -640,11 +776,16 @@ static getSystemInfoSync() {
   return tt.getSystemInfoSync();
 }
 static canIUse(object) {
-  return true;
+  return tt.canIUse(object);
 }
 //////////////////////////////内存/////////////////////////////
 static onMemoryWarning(object) {
-  return tt.onMemoryWarning(object);
+  // return tt.onMemoryWarning(object);
+  console.alert("本平台暂不支持onMemoryWarning")
+}
+///
+static onUIStyleChange(callback){
+  console.alert("本平台暂不支持onUIStyleChange")
 }
 /////////////////////////////网络状态/////////////////////////////
 static getNetworkType = function(object) {
@@ -680,13 +821,18 @@ static startCompass(object) {
 }
 //////////////////////陀螺仪////////////////////
 static onGyroscopeChange(object) {
-  return tt.onGyroscopeChange(object);
+  // return tt.onGyroscopeChange(object);
+    console.alert("本平台暂不支持onGyroscopeChange")
+
 }
 static stopGyroscope(object) {
-  return tt.stopGyroscope(object);
+  // return tt.stopGyroscope(object);
+    console.alert("本平台暂不支持stopGyroscope")
+
 }
 static startGyroscope(object) {
-  return tt.startGyroscope(object);
+  // return tt.startGyroscope(object);
+    console.alert("本平台暂不支持startGyroscope")
 }
 //////////////////////电话////////////////////
 static makePhoneCall = function(object) {
@@ -730,87 +876,142 @@ static vibrateShort(object) {
 }
 //
 static addPhoneContact(object) {
-  return tt.addPhoneContact(object);
+  // return tt.addPhoneContact(object);
+  console.alert("暂不支持addPhoneContact")
 }
-///////蓝牙//////
+///////蓝牙/暂不支持/////
 static stopBluetoothDevicesDiscovery(object) { 
-   return tt.stopBluetoothDevicesDiscovery(object);
+  //  return tt.stopBluetoothDevicesDiscovery(object);
+      console.alert("暂不支持stopBluetoothDevicesDiscovery")
+
   }
 static startBluetoothDevicesDiscovery(object) {
-  return tt.startBluetoothDevicesDiscovery(object);
+  // return tt.startBluetoothDevicesDiscovery(object);
+        console.alert("暂不支持startBluetoothDevicesDiscovery")
+
 }
 static openBluetoothAdapter(object) { 
-   return tt.openBluetoothAdapter(object); }
+  //  return tt.openBluetoothAdapter(object); 
+        console.alert("暂不支持openBluetoothAdapter")
+
+}
 static onBluetoothDeviceFound(object) {
-  return tt.onBluetoothDeviceFound(object);
+  // return tt.onBluetoothDeviceFound(object);
+        console.alert("暂不支持onBluetoothDeviceFound")
+
 }
 static onBluetoothAdapterStateChange(object) {
-  return tt.onBluetoothAdapterStateChange(object);
+  // return tt.onBluetoothAdapterStateChange(object);
+        console.alert("暂不支持onBluetoothAdapterStateChange")
+
 }
 static getConnectedBluetoothDevices(object) {
-  return tt.getConnectedBluetoothDevices(object);
+  // return tt.getConnectedBluetoothDevices(object);
+        console.alert("暂不支持getConnectedBluetoothDevices")
+
 }
 static getBluetoothDevices(object) {
-  return tt.getBluetoothDevices(object);
+  // return tt.getBluetoothDevices(object);
+        console.alert("暂不支持getBluetoothDevices")
+
 }
 static getBluetoothAdapterState(object) {
-  return tt.getBluetoothAdapterState(object);
+  // return tt.getBluetoothAdapterState(object);
+        console.alert("暂不支持getBluetoothAdapterState")
+
 }
 static closeBluetoothAdapter(object) {
-  return tt.closeBluetoothAdapter(object);
+  // return tt.closeBluetoothAdapter(object);
+        console.alert("暂不支持closeBluetoothAdapter")
+
 }
 ////低功耗蓝牙/////
 static setBLEMTU(object){
-  return tt.setBLEMTU(object)
+  // return tt.setBLEMTU(object)
+        console.alert("暂不支持setBLEMTU")
+
 }
 static writeBLECharacteristicValue(object){
-  return tt.writeBLECharacteristicValue(object)
+  // return tt.writeBLECharacteristicValue(object)
+        console.alert("暂不支持writeBLECharacteristicValue")
+
 }
 static readBLECharacteristicValue(object){
-  return tt.readBLECharacteristicValue(object)
+  //return tt.readBLECharacteristicValue(object)
+        console.alert("暂不支持readBLECharacteristicValue")
+
 }
 static onBLEConnectionStateChange(object){
-  return tt.onBLEConnectionStateChange(object)
+//  return tt.onBLEConnectionStateChange(object)
+      console.alert("暂不支持onBLEConnectionStateChange")
+
 }
 static onBLECharacteristicValueChange(object){
-  return tt.onBLECharacteristicValueChange(object)
+ // return tt.onBLECharacteristicValueChange(object)
+       console.alert("暂不支持onBLECharacteristicValueChange")
+
 }
 static notifyBLECharacteristicValueChange(object){
-  return tt.notifyBLECharacteristicValueChange(object)
+ // return tt.notifyBLECharacteristicValueChange(object)
+       console.alert("暂不支持notifyBLECharacteristicValueChange")
+
 }
 static getBLEDeviceServices(object){
-  return tt.getBLEDeviceServices(object)
+ // return tt.getBLEDeviceServices(object)
+       console.alert("暂不支持getBLEDeviceServices")
+
 }
 static getBLEDeviceRSSI(object){
-  return tt.getBLEDeviceRSSI(object)
+//  return tt.getBLEDeviceRSSI(object)
+      console.alert("暂不支持getBLEDeviceRSSI")
+
 }
 static getBLEDeviceCharacteristics(object){
-  return tt.getBLEDeviceCharacteristics(object)
+//  return tt.getBLEDeviceCharacteristics(object)
+      console.alert("暂不支持getBLEDeviceCharacteristics")
+
 }
 static createBLEConnection(object){
-  return tt.createBLEConnection(object)
+ // return tt.createBLEConnection(object)
+       console.alert("暂不支持createBLEConnection")
+
 }
 static closeBLEConnection(object){
-  return tt.closeBLEConnection(object)
+ // return tt.closeBLEConnection(object)
+       console.alert("暂不支持closeBLEConnection")
+
 }
 
  ////////////// iBeacon //////////////////
  static onBeaconServiceChange(object) {
-  return tt.onBeaconServiceChange(object);
+ // return tt.onBeaconServiceChange(object);
+       console.alert("暂不支持onBeaconServiceChange")
+
 }
 static onBeaconUpdate(object) {
-  return tt.onBeaconUpdate(object);
+ // return tt.onBeaconUpdate(object);
+       console.alert("暂不支持onBeaconUpdate")
+
 }
 static getBeacons(object) {
-  return tt.getBeacons(object);
+ // return tt.getBeacons(object);
+       console.alert("暂不支持getBeacons")
+
 }
 static stopBeaconDiscovery(object) {
-  return tt.stopBeaconDiscovery(object);
+ // return tt.stopBeaconDiscovery(object);
+       console.alert("暂不支持stopBeaconDiscovery")
+
 }
 static startBeaconDiscovery(object) {
-  return tt.startBeaconDiscovery(object);
+//  return tt.startBeaconDiscovery(object);
+      console.alert("暂不支持startBeaconDiscovery")
+
 }
 //////////////Wi-Fi/////////////
+static getConnectedWifi(object){
+  return tt.getConnectedWifi(object)
+}
 static stopWifi(object) {
   // return tt.stopWifi(object);
   console.alert("头条暂不支持stopWifi")
@@ -953,7 +1154,8 @@ static checkIsSoterEnrolledInDevice(object) {
     return tt.hideKeyboard(object)
   }
   static onKeyboardHeightChange(callback){
-    return tt.onKeyboardHeightChange(callback)
+    // return tt.onKeyboardHeightChange(callback)
+    console.alert("本平台暂不支持")
   }
 //////////////////////设备完////////////////////
 
@@ -1024,10 +1226,14 @@ static onTabBarMidButtonTap(CALLBACK){
 }
 ///////////////////////////////////////////////
 static setBackgroundTextStyle(object) {
-    return tt.setBackgroundTextStyle(object)
+    // return tt.setBackgroundTextStyle(object)
+      console.alert("本平台暂不支持setBackgroundTextStyle")
+
   }
   static setBackgroundColor(object) {
-    return tt.setBackgroundColor(object)
+    // return tt.setBackgroundColor(object)
+      console.alert("本平台暂不支持setBackgroundColor")
+
   }
    /////////////////// animation //////////////////////////
    static createAnimation(object) {
@@ -1039,14 +1245,21 @@ static pageScrollTo(object) {
 }
 //////////////////窗口////////////////////////
 static offWindowResize(object) {
-  return tt.offWindowResize(object)
+ // return tt.offWindowResize(object)
+       console.alert("本平台暂不支持offWindowResize")
+
 }
 static onWindowResize(object) {
-  return tt.onWindowResize(object)
+  //return tt.onWindowResize(object)
+        console.alert("本平台暂不支持onWindowResize")
+
+  
 }
 /////////////////字体/////////////////////////
 static loadFontFace(object) {
-  return tt.loadFontFace(object)
+  //return tt.loadFontFace(object)
+ console.alert("本平台暂不支持onWindowResize")
+
 }
 /////////////////下拉/////////////////////////
 static PullDownRefresh() {
@@ -1067,28 +1280,39 @@ static createContext() {
   return new Context();
 }
 static createCanvasContext(canvasId,ui) {
-  return new CanvasContext(tt.createCanvasContext(canvasId));
+  //return new CanvasContext(tt.createCanvasContext(canvasId));
+    console.alert("本平台不支持createCanvasContext")
+
 }
 static canvasToTempFilePath(object) {
-  return tt.canvasToTempFilePath(object);
+ // return tt.canvasToTempFilePath(object);
+    console.alert("本平台不支持canvasToTempFilePath")
+
 }
 static canvasPutImageData(object) {
-  return tt.canvasPutImageData(object)
+  //return tt.canvasPutImageData(object)
+    console.alert("本平台不支持canvasPutImageData")
+
 };
 static canvasGetImageData(object) {
-  return tt.canvasGetImageData(object)
+ // return tt.canvasGetImageData(object)
+    console.alert("本平台不支持canvasGetImageData")
+
 };
 ////////////////////////广告//////////////////
 static createRewardedVideoAd(object){
-  return tt.createRewardedVideoAd(object)
+  //return tt.createRewardedVideoAd(object)
+      console.alert("本平台不支持createRewardedVideoAd")
+
 }
 static createInterstitialAd(object){
-  return tt.createInterstitialAd(object)
+  //return tt.createInterstitialAd(object)
+      console.alert("本平台不支持createInterstitialAd")
+
 }
 ////////////////////////////////
-static requestSubscribeMessage(object){
-  // return requestSubscribeMessage(object)
-  console.alert("本平台不支持requestSubscribeMessage")
+static requestSubscribeMessage(object){//订阅消息
+  return requestSubscribeMessage(object)
 }
 //////////////////////////////////////////
   static setNavigationBarTitle(object) {
@@ -1174,12 +1398,14 @@ static createVideoContext(videoId,ui) {
   }
   ///////////////////////////
  static getSubNVueById(subNvueId){
-  
+  console.alert("暂不支持getSubNVueById")
 }
 static getCurrentSubNVue(){
+  console.alert("暂不支持getCurrentSubNVue")
 
 }
 static requireNativePlugin(PluginName){
+  console.alert("暂不支持getCurrentSubNVue")
 
 }
 
