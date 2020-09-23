@@ -434,7 +434,7 @@ export default class uni {
   static reportAnalytics(object, eventName) {
     return tt.reportAnalytics(object, eventName)
   }
-  static requestPayment(object) {///provider参数未完成
+  static requestPayment(object) {//provider参数未完成
     return tt.pay(object);
   }
   static authorize(object) {
